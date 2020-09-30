@@ -19,4 +19,13 @@ class Figure {
   bool hasOtherOn(Coordinate coordinate) {
    return coordinates.where((element) => element == coordinate).length == 1;
   }
+
+  bool isOnGameScreen() {
+    return coordinates.any((element) => element.y > 0);
+  }
+
+  @override
+  String toString() {
+    return 'Figure{_coordinates: $_coordinates, _type: $_type}';
+  }
 }
